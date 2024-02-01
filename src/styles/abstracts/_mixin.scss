@@ -1,0 +1,8 @@
+@use "./variables";
+@use "sass:map";
+
+@mixin typography($name) {
+  font-size: map-get(variables.$typography-font-size-map, $name);
+  font-weight: map-get(variables.$typography-font-weight-map, $name);
+  line-height: map-get(variables.$typography-line-height-map, $name);
+}

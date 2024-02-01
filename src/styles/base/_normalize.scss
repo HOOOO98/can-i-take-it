@@ -1,0 +1,128 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+// HTML5 요소에 대한 블록 레벨 스타일을 설정합니다.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+// 목록 스타일을 제거하여 목록 요소의 일관된 베이스라인을 제공합니다.
+ul,
+li {
+  list-style: none;
+}
+
+// 링크의 기본 텍스트 데코레이션을 제거하여 사용자 정의 스타일을 쉽게 적용할 수 있습니다.
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// 이미지와 폼 필드가 부모 요소에 정확하게 맞도록 설정합니다.
+img,
+fieldset {
+  border: 0;
+}
+
+// 테이블에 관련된 스타일을 정규화합니다.
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

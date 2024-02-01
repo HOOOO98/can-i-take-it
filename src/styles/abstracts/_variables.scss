@@ -1,0 +1,71 @@
+@use "sass:map";
+
+// typography-map
+$typography-font-size-map: (
+  "headline": 2.2rem,
+  // 22px
+  "titleLarge": 2rem,
+  // 20px
+  "titleMedium": 1.8rem,
+  // 18px
+  "titleSmall": 1.6rem,
+  // 16px
+  "subTitle": 1.6rem,
+  // 16px
+  "bodyLarge": 1.6rem,
+  // 16px
+  "bodySmall": 1.4rem,
+  // 14px
+  "button": 1.4rem,
+  // 14px
+  "tabLabel": 1.4rem,
+  // 14px
+  "captionLarge": 1.3rem,
+  // 13px
+  "captionMedium": 1.2rem,
+  // 12px
+  "captionSmall": 1.2rem,
+  // 12px
+);
+
+$typography-font-weight-map: (
+  "headline": 700,
+  "titleLarge": 700,
+  "titleMedium": 700,
+  "titleSmall": 700,
+  "subTitle": 500,
+  "bodyLarge": 400,
+  "bodySmall": 400,
+  "button": 700,
+  "tabLabel": 500,
+  "captionLarge": 500,
+  "captionMedium": 700,
+  "captionSmall": 500,
+);
+
+$typography-line-height-map: (
+  "headline": 3rem,
+  // 30px
+  "titleLarge": 2.8rem,
+  // 28px
+  "titleMedium": 2.6rem,
+  // 26px
+  "titleSmall": 2.4rem,
+  // 24px
+  "subTitle": 2.8rem,
+  // 24px
+  "bodyLarge": 2.4rem,
+  // 24px
+  "bodySmall": 2.2rem,
+  // 22px
+  "button": 2.2rem,
+  // 22px
+  "tabLabel": 2.2rem,
+  // 22px
+  "captionLarge": 2.2rem,
+  // 22px
+  "captionMedium": 2rem,
+  // 20px
+  "captionSmall": 2rem,
+  // 20px
+);
