@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import styles from "@styles/components/Header.module.scss";
+import styles from "@styles/components/header.module.scss";
 function Header() {
   return (
     <header className={styles.container}>

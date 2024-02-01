@@ -16,14 +16,17 @@ async function getReport(phoneNumber) {
         category: item[0],
         count: item[1],
       }));
-
-      return topCategories;
+      if (topCategories[0]) {
+        return topCategories;
+      } else {
+        return "It's a number that hasn't been reported yet.";
+      }
     } else {
       return "It's a number that hasn't been reported yet.";
     }
   } catch (error) {
     console.error("[getdoc]Have trouble in process", error);
-    throw new Error("[getdoc]Have trouble in process");
+    return "It's a number that hasn't been reported yet.";
   }
 }
 
