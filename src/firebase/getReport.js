@@ -1,5 +1,5 @@
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { app } from "./firebase";
+import { analytics, app } from "./firebase";
 
 const db = getFirestore(app);
 async function getReport(phoneNumber) {
@@ -9,9 +9,11 @@ async function getReport(phoneNumber) {
     const docSnap = await getDoc(reportRef);
 
     if (docSnap.exists()) {
+      logEvent(analytics, "report_view", {
+        phone_number: phoneNumber,
+      });
       const reports = docSnap.data();
       const sortedReports = Object.entries(reports).sort((a, b) => b[1] - a[1]);
-
       const topCategories = sortedReports.slice(0, 3).map((item) => ({
         category: item[0],
         count: item[1],
