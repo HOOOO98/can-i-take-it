@@ -6,6 +6,7 @@ import Loading from "@/conponents/loading";
 import Header from "@/conponents/header";
 import styles from "@styles/pages/details.module.scss";
 import updateReport from "@/firebase/setReport";
+import { logEvent } from "@/firebase/firebase";
 
 function Detail() {
   const [reportData, setReportData] = useState("");
@@ -19,6 +20,7 @@ function Detail() {
     const fetchData = async () => {
       const data = await getReport(phoneNumber);
       setReportData(data);
+      logEvent("report_view", { phone_number: phoneNumber });
     };
     fetchData();
   }, [phoneNumber]);
@@ -28,6 +30,7 @@ function Detail() {
     if (selectedCategory) {
       setVisible(true);
       updateReport(phoneNumber, selectedCategory);
+      logEvent("report_update", { phone_number: phoneNumber, category: selectedCategory });
       setTimeout(() => {
         setVisible(false);
       }, 2000);

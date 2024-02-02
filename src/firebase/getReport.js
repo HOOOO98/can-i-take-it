@@ -9,9 +9,6 @@ async function getReport(phoneNumber) {
     const docSnap = await getDoc(reportRef);
 
     if (docSnap.exists()) {
-      logEvent(analytics, "report_view", {
-        phone_number: phoneNumber,
-      });
       const reports = docSnap.data();
       const sortedReports = Object.entries(reports).sort((a, b) => b[1] - a[1]);
       const topCategories = sortedReports.slice(0, 3).map((item) => ({

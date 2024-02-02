@@ -8,10 +8,6 @@ async function updateReport(phoneNumber, selectedCategory) {
   try {
     const docSnap = await getDoc(reportRef);
     if (docSnap.exists()) {
-      logEvent(analytics, "report_update", {
-        phone_number: phoneNumber,
-        category: selectedCategory,
-      });
       const currentCount = docSnap.data()[selectedCategory] || 0;
       await updateDoc(reportRef, {
         [selectedCategory]: currentCount + 1,
